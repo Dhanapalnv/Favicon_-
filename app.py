@@ -32,7 +32,7 @@ def favicon_app():
             img = Image.open(BytesIO(response.content))
             
             # Display the favicon image
-            st.image(img, caption='Favicon Retrieved!', use_column_width=False)
+            st.image(img, caption='Favicon Retrieved!', use_container_width=False)
 
             # Prepare the image for download
             buffer = BytesIO()
