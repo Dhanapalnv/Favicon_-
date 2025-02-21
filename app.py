@@ -2,7 +2,14 @@ import streamlit as st
 import requests
 from io import BytesIO
 from PIL import Image
+import streamlit.components.v1 as components
 
+# Set up Streamlit page configuration
+st.set_page_config(
+    page_title="Exifa.net", 
+    page_icon="✨", 
+    layout="wide"
+)
 
 particles_js = """<!DOCTYPE html>
 <html lang="en">
@@ -24,8 +31,7 @@ particles_js = """<!DOCTYPE html>
     z-index: 1;
     color: white;
   }
-  
-</style>
+  </style>
 </head>
 <body>
   <div id="particles-js"></div>
@@ -149,15 +155,7 @@ particles_js = """<!DOCTYPE html>
 </html>
 """
 
-st.set_page_config(page_title="Exifa.net", page_icon="✨", layout="wide")
-
 def favicon_app():
-    # Set up Streamlit page configuration
-    st.set_page_config(
-        page_title="Extract Favicon",  # Page title
-        page_icon="https://freepngimg.com/thumb/world_wide_web/99120-www-free-hd-image.png"  # Page icon
-    )
-
     st.title("Extract Favicon")  # Main title
 
     # Input field for the website URL
@@ -196,6 +194,9 @@ def favicon_app():
         except requests.exceptions.RequestException as e:
             # Handle request errors
             st.write("An error occurred:", e)
+
+if "show_animation" not in st.session_state:
+    st.session_state.show_animation = True
 
 if st.session_state.show_animation:
     components.html(particles_js, height=370, scrolling=False)
