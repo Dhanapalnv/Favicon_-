@@ -7,7 +7,7 @@ import streamlit.components.v1 as components
 # Set up Streamlit page configuration
 st.set_page_config(
     page_title="Mr.Paul's Favicon Finder", 
-    page_icon="🦋🌀", 
+    page_icon="🦋", 
     layout="wide"
 )
 
