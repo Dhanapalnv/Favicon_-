@@ -156,7 +156,7 @@ particles_js = """<!DOCTYPE html>
 """
 
 def favicon_app():
-    st.title("Extract Favicon")  # Main title
+    st.title("Favicon Finder")  # Main title
 
     # Input field for the website URL
     url = st.text_input("Input URL", placeholder="https://www.google.com")
