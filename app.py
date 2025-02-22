@@ -7,9 +7,13 @@ import streamlit.components.v1 as components
 # Set up Streamlit page configuration
 st.set_page_config(
     page_title="Mr.Paul's Favicon Finder", 
-    page_icon="🦋", 
+    page_icon="✨", 
     layout="wide"
 )
+
+# Display a loading image
+loading_image_url = "https://raw.githubusercontent.com/sahirmaharaj/exifa/main/img/loading.gif"
+st.image(loading_image_url, use_column_width=True)
 
 particles_js = """<!DOCTYPE html>
 <html lang="en">
