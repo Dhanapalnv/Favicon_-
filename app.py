@@ -156,7 +156,6 @@ particles_js = """<!DOCTYPE html>
 """
 
 def favicon_app():
-    st.balloons()
     st.title("Favicon Finder")  # Main title
 
     # Input field for the website URL
@@ -179,6 +178,7 @@ def favicon_app():
             img = Image.open(BytesIO(response.content))
             
             # Display the favicon image
+            st.balloons()
             st.image(img, caption='Favicon Retrieved!', use_container_width=False)
 
             # Prepare the image for download
