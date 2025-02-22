@@ -5,7 +5,6 @@ from PIL import Image
 import streamlit.components.v1 as components
 
 # Set up Streamlit page configuration
-st.balloons()
 st.set_page_config(
     page_title="Mr.Paul's Favicon Finder", 
     page_icon="🦋", 
@@ -157,6 +156,7 @@ particles_js = """<!DOCTYPE html>
 """
 
 def favicon_app():
+    st.balloons()
     st.title("Favicon Finder")  # Main title
 
     # Input field for the website URL
