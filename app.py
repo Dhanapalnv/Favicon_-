@@ -5,6 +5,7 @@ from PIL import Image
 import streamlit.components.v1 as components
 
 # Set up Streamlit page configuration
+st.balloons()
 st.set_page_config(
     page_title="Mr.Paul's Favicon Finder", 
     page_icon="🦋", 
