@@ -10,6 +10,7 @@ st.set_page_config(
     page_icon="🦋", 
     layout="wide"
 )
+st.balloons()
 
 particles_js = """<!DOCTYPE html>
 <html lang="en">
